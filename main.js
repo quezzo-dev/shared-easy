@@ -164,14 +164,14 @@ function parseCards() {
               <p class="card__title">${el.title}</p>
               <div class="card__wrapper">
                     <img
-                            src="../images/cards/sqft.svg"
+                            src="./images/cards/sqft.svg"
                             alt="Card Images"
                             class="card__img"
                             />
                 <p class="card__sqft">${el.sqft} sqft</p>
 
                  <img
-                            src="../images/cards/bedrooms.svg"
+                            src="./images/cards/bedrooms.svg"
                             alt="Card Images"
                             class="card__img"
                             />
