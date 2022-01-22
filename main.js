@@ -234,14 +234,14 @@ card.forEach((element) => {
               <p class="card__title">${e.title}</p>
               <div class="card__wrapper">
                             <img
-                            src="../images/cards/sqft.svg"
+                            src="./images/cards/sqft.svg"
                             alt="Card Images"
                             class="card__img"
                             />
                 <p class="card__sqft">${e.sqft} sqft</p>
 
                  <img
-                            src="../images/cards/bedrooms.svg"
+                            src="./images/cards/bedrooms.svg"
                             alt="Card Images"
                             class="card__img"
                             />
