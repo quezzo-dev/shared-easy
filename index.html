@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css//normalize.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <main class="main">
+      <!-- ==========| Header |========== -->
+
+      <section class="content">
+        <div class="content__header">
+          <div class="content__header-wrapper">
+            <img
+              src="./images/header/logo.svg"
+              class="content__header-logo"
+              alt="logo"
+            />
+            <button class="content__header-button">
+              <img
+                src="./images/header/burger.svg"
+                alt="Burger Menu"
+                class="content__header-img"
+              />
+            </button>
+          </div>
+          <div class="content__filter">
+            <div class="content__filter-wrapper">
+              <a href="#" class="content__filter-back"
+                ><img
+                  src="./images/header/arrow.svg"
+                  alt="arrow"
+                  class="content__filter-arrow-back"
+              /></a>
+
+              <button class="content__filter-button">
+                <img src="./images/header/filter.svg" alt="" />
+              </button>
+              <div class="filter__item-wrapper">
+                <div class="content__filter-left">
+                  <p class="content__filter-description">Location</p>
+                  <p class="content__filter-text">New York City</p>
+                </div>
+
+                <button class="content__filter-arrow">
+                  <img
+                    src="./images/header/arrow.svg"
+                    alt="arrow"
+                    class="content__filter-arrow-svg"
+                  />
+                </button>
+              </div>
+
+              <div class="filter__item-wrapper filter__item-wrapper-desktop">
+                <div class="content__filter-left">
+                  <p class="content__filter-description">Bedrooms</p>
+                  <p class="content__filter-text">2 bedrooms</p>
+                </div>
+
+                <button class="content__filter-arrow">
+                  <img
+                    src="./images/header/arrow.svg"
+                    alt="arrow"
+                    class="content__filter-arrow-svg"
+                  />
+                </button>
+              </div>
+
+              <div class="filter__item-wrapper filter__item-wrapper-desktop">
+                <div class="content__filter-left">
+                  <p class="content__filter-description">Move in</p>
+                  <p class="content__filter-text">Select day</p>
+                </div>
+
+                <button class="content__filter-arrow">
+                  <img
+                    src="./images/header/arrow.svg"
+                    alt="arrow"
+                    class="content__filter-arrow-svg"
+                  />
+                </button>
+              </div>
+
+              <div class="filter__item-wrapper filter__item-wrapper-desktop">
+                <div class="content__filter-left">
+                  <p class="content__filter-description">Move Out</p>
+                  <p class="content__filter-text">Select day</p>
+                </div>
+
+                <button class="content__filter-arrow">
+                  <img
+                    src="./images/header/arrow.svg"
+                    alt="arrow"
+                    class="content__filter-arrow-svg"
+                  />
+                </button>
+              </div>
+            </div>
+            <button class="content__filter-search">Search</button>
+          </div>
+        </div>
+
+        <div class="filter filter__mobile">
+          <ul class="filter__list">
+            <li class="filter__item">
+              <div class="filter__item-text">
+                <p class="content__filter-description">Location</p>
+                <p class="content__filter-text">New York City</p>
+              </div>
+              <button class="content__filter-arrow">
+                <img
+                  src="./images/header/arrow.svg"
+                  alt="arrow"
+                  class="content__filter-arrow-svg"
+                />
+              </button>
+            </li>
+            <div class="filter__item-wrapper">
+              <li class="filter__item">
+                <div class="filter__item-text">
+                  <p class="content__filter-description">Move in</p>
+                  <p class="content__filter-text">Select day</p>
+                </div>
+                <button class="content__filter-arrow">
+                  <img
+                    src="./images/header/arrow.svg"
+                    alt="arrow"
+                    class="content__filter-arrow-svg"
+                  />
+                </button>
+              </li>
+              <li class="filter__item">
+                <div class="filter__item-text">
+                  <p class="content__filter-description">Move Out</p>
+                  <p class="content__filter-text">Select day</p>
+                </div>
+                <button class="content__filter-arrow">
+                  <img
+                    src="./images/header/arrow.svg"
+                    alt="arrow"
+                    class="content__filter-arrow-svg"
+                  />
+                </button>
+              </li>
+            </div>
+            <li class="filter__item">
+              <div class="filter__item-text">
+                <p class="content__filter-description">Bedrooms</p>
+                <p class="content__filter-text">2 bedrooms</p>
+              </div>
+              <button class="content__filter-arrow">
+                <img
+                  src="./images/header/arrow.svg"
+                  alt="arrow"
+                  class="content__filter-arrow-svg"
+                />
+              </button>
+            </li>
+          </ul>
+
+          <div class="content__filter-button-wrapper">
+            <button class="content__filter-arrow" id="js-filter-arrow">
+              <img
+                src="./images/header/arrow.svg"
+                alt="arrow"
+                class="content__filter-arrow-up"
+              />
+            </button>
+
+            <button class="content__filter-search">Search</button>
+          </div>
+        </div>
+
+        <!-- ==========| Card List |========== -->
+
+        <div class="card">
+          <ul class="card__list" id="js-list"></ul>
+
+          <!-- Modal -->
+          <div class="backdrop backdrop--hidden" data-modal>
+            <div class="modal">
+              <button class="modal__cross" data-modal-close>
+                <img src="./images/modal/cross.svg" width="14" alt="Крестик" />
+              </button>
+
+              <h2 class="modal__title">YOUR CHOISE</h2>
+
+              <div class="modal__card"></div>
+            </div>
+          </div>
+          <!-- End Modal -->
+        </div>
+
+        <!-- ==========| End Card List |========== -->
+      </section>
+
+      <!-- ==========| End Header |========== -->
+
+      <!-- ==========| Map |========== -->
+      <section class="map">
+        <div class="map__wrapper">
+          <div class="map__button">
+            <img
+              class="map__button-svg"
+              src="./images/map/arrow.svg"
+              alt="Arrow"
+            />
+            <p class="map__button-text">Open map layer</p>
+          </div>
+
+          <div id="map"></div>
+        </div>
+      </section>
+      <!-- ==========| End Map |========== -->
+    </main>
+  </body>
+
+  <script src="./main.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    const card1 = document.querySelectorAll(".card__item");
+
+    card1.forEach((el) => {
+      el.addEventListener("click", () => {
+        var swiperSecond = new Swiper(".mySwiperSecond", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      });
+    });
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9kgjdj_2Ag0FQEwJzDKq2cthoN56x3Jg&callback=initMap&v=weekly"
+    async
+  ></script>
+</html>
