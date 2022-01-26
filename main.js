@@ -33,7 +33,7 @@ function initMap() {
     new google.maps.Marker({
       position: { lat: Number(el.center[0]), lng: Number(el.center[1]) },
       map,
-      icon: "/shared-easy/images/map/mapMarker.svg",
+      icon: "/images/map/mapMarker.svg",
       title: "Hello World!",
     });
   });
