@@ -23,7 +23,7 @@ function initMap() {
     center: { lat: 40.929077, lng: -98.368149 },
   });
 
-  const icon = "/images/map/mapMarker.svg";
+  // const icon = "shared-easy/images/map/mapMarker.svg";
 
   // setMarkers(map);
   citymap.forEach((el) => {
@@ -33,7 +33,7 @@ function initMap() {
     new google.maps.Marker({
       position: { lat: Number(el.center[0]), lng: Number(el.center[1]) },
       map,
-      icon: icon,
+      icon: "/images/map/mapMarker.svg",
       title: "Hello World!",
     });
   });
