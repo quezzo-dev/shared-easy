@@ -1,46 +1,59 @@
-const citymap = {
-  chicago: {
-    center: { lat: 41.878, lng: -87.629 },
+const citymap = [
+  {
+    center: [41.878, -87.629],
     population: 2714856,
   },
-  newyork: {
-    center: { lat: 40.714, lng: -74.005 },
+  {
+    center: [40.714, -74.005],
     population: 8405837,
   },
-  losangeles: {
-    center: { lat: 34.052, lng: -118.243 },
+  {
+    center: [34.052, -118.243],
     population: 3857799,
   },
-  vancouver: {
-    center: { lat: 49.25, lng: -123.1 },
+  {
+    center: [49.25, -123.1],
     population: 603502,
   },
-};
+];
 
 function initMap() {
-  // Create the map.
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
-    center: { lat: 37.09, lng: -95.712 },
-    mapTypeId: "terrain",
+    center: { lat: 40.929077, lng: -98.368149 },
+  });
+
+  const icon = "/images/map/mapMarker.svg";
+
+  // setMarkers(map);
+  citymap.forEach((el) => {
+    myLatLng = Number(el.center);
+    console.log(el.center[0]);
+
+    new google.maps.Marker({
+      position: { lat: Number(el.center[0]), lng: Number(el.center[1]) },
+      map,
+      icon: icon,
+      title: "Hello World!",
+    });
   });
 
   // Construct the circle for each value in citymap.
   // Note: We scale the area of the circle based on the population.
-  for (const city in citymap) {
-    // Add the circle for this city to the map.
-    const cityCircle = new google.maps.Circle({
-      background: "#fff",
-      //   width: 5000,
-      //   height: 5000,
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      //   fillColor: "#FF0000",
-      fillOpacity: 0.35,
-      map,
-      center: citymap[city].center,
-    });
-  }
+  // for (const city in citymap) {
+  //   // Add the circle for this city to the map.
+  //   const cityCircle = new google.maps.Circle({
+  //     background: "#fff",
+  //     //   width: 5000,
+  //     //   height: 5000,
+  //     strokeOpacity: 0.8,
+  //     strokeWeight: 2,
+  //     //   fillColor: "#FF0000",
+  //     fillOpacity: 0.35,
+  //     map,
+  //     center: citymap[city].center,
+  //   });
+  // }
 }
 
 const button = document.querySelector(".map__button");

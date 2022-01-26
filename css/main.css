@@ -286,6 +286,10 @@ body {
   color: #272c58;
 }
 
+.modal__form {
+  display: none;
+}
+
 @media screen and (min-width: 1440px) {
   .main {
     display: flex;
@@ -298,16 +302,17 @@ body {
   .content {
     height: 100%;
     overflow: scroll;
+    width: 52.77777777777778vw;
   }
 
   #map {
     height: 100%;
-    width: 680px;
+    width: 47.22222222222222vw;
   }
 
   .map {
     height: 100%;
-    width: 680px;
+    width: 47.22222222222222vw;
   }
 
   .map__button {
@@ -325,19 +330,23 @@ body {
   .card__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 1.3888888888888888vw;
   }
 
   .card__item {
     margin-bottom: 0px !important;
+
+    width: 23.819444444444443vw;
   }
 
   .card {
-    padding: 24px;
+    padding: 9.305555555555555vw 1.6666666666666667vw 1.6666666666666667vw;
   }
 
   .content__header {
-    position: unset;
+    width: inherit;
+    max-width: inherit;
+    /* position: unset; */
   }
 
   .filter__mobile {
@@ -353,12 +362,27 @@ body {
   }
 
   .content__filter-back {
-    margin-right: 10px;
+    margin-right: 0.6944444444444444vw;
   }
 
   .modal {
-    width: 400px;
+    width: 27.77777777777778vw;
     margin-left: auto;
+  }
+
+  .backdrop {
+    display: flex;
+  }
+
+  .modal__form {
+    display: block;
+    width: 503px;
+    height: 100%;
+    background: #fff;
+  }
+
+  .modal__cross {
+    background: #eff0f8;
   }
 }
 
@@ -369,7 +393,7 @@ body {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.25vw;
   background: #fff;
 
   /* Center slide text vertically */
